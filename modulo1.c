@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <dirent.h>
+#include <string.h>
+// Llamada a otro archivo desde éste módulo
+#include "modulo2.c"
 
 
 
@@ -21,18 +25,38 @@ void write_le_fichier(char *phrase, char *nom_fichier)
     }
 }
 
+void read_le_fichier()
+{
+    FILE *fichier;
+    char nom_fichier[100];
+    printf("Indica el nombre del archivo: ");
+    scanf(" %[^\n]s", nom_fichier);
+    fichier = fopen(nom_fichier, "r");
+
+    if (fichier == NULL)
+    {
+        printf("El archivo no se pudo abrir");
+    }else{
+        char linea[100];
+        while (fgets(linea,sizeof(linea),fichier) != NULL )
+        {
+            printf("%s",linea);
+        }
+    }
+    fclose(fichier);
+    
+}
+
 void introdiure_expression()
 {
     char phrase[100];
     char nom_fichier[100];
     printf("Ingrese la palabra o frase: ");
+    // Funcion para obtener entrada 1
     fgets(phrase,sizeof(phrase),stdin);
+
     printf("Introduce nombre del archivo: ");
-    // fgets(nom_fichier,sizeof(nom_fichier),stdin);
-
-    // // Eliminar el salto de línea del nombre del archivo
-    // nom_fichier[strcspn(nom_fichier, "\n")] = '\0';
-
+    // Funcion para obtener entrada 2: conveniente para nombre de archivo
     scanf(" %[^\n]s", nom_fichier);
     write_le_fichier(phrase,nom_fichier);
 
@@ -40,7 +64,7 @@ void introdiure_expression()
 
 int main()
 {
-    introdiure_expression();
+    mostrarArchivosSinExtension("C:\\Users\\joni-\\Documents\\GitHub\\C_1\\output");
     
     return 0;
 }
