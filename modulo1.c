@@ -32,7 +32,7 @@ void read_le_fichier()
     printf("Indica el nombre del archivo: ");
     scanf(" %[^\n]s", nom_fichier);
     fichier = fopen(nom_fichier, "r");
-
+    // Si el archivo existe se leen las lineas del archivo
     if (fichier == NULL)
     {
         printf("El archivo no se pudo abrir");
@@ -64,7 +64,8 @@ void introdiure_expression()
 
 int main()
 {
-    mostrarArchivosSinExtension("C:\\Users\\joni-\\Documents\\GitHub\\C_1\\output");
+  //  introdiure_expression();
+    mostrarArchivosSinExtension("C:\\Users\\joni-\\Documents\\GitHub\\C_1");
     
     return 0;
 }
