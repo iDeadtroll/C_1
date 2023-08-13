@@ -16,7 +16,7 @@ int tieneExtension(const char *nombreArchivo)
     return 1; // Tiene extensión
 }
 
-void mostrarArchivosSinExtension(const char *rutaDirectorio)
+void mostrarArchivos(const char *rutaDirectorio)
 {
     DIR *directorio;
     // DIR *directorio : es un puntero a una estructura DIR que representa un directorio. Se utiliza para abrir y leer el contenido del directorio especificado.

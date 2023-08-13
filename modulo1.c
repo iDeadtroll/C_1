@@ -62,10 +62,3 @@ void introdiure_expression()
 
 }
 
-int main()
-{
-  //  introdiure_expression();
-    mostrarArchivosSinExtension("C:\\Users\\joni-\\Documents\\GitHub\\C_1");
-    
-    return 0;
-}
