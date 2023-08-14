@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <dirent.h>
 #include <string.h>
-// Llamada a otro archivo desde éste módulo
-#include "modulo2.c"
+
 
 
 
@@ -53,7 +52,7 @@ void introdiure_expression()
     char nom_fichier[100];
     printf("Ingrese la palabra o frase: ");
     // Funcion para obtener entrada 1
-    fgets(phrase,sizeof(phrase),stdin);
+    scanf("%s",phrase);
 
     printf("Introduce nombre del archivo: ");
     // Funcion para obtener entrada 2: conveniente para nombre de archivo
