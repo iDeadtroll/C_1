@@ -1,3 +1,4 @@
+// Módulo para mostrar archivos sin extension ó con extension '.txt' presentes en un directorio.
 #include <stdio.h>
 #include <dirent.h>
 #include <sys/stat.h>

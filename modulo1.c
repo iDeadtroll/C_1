@@ -1,9 +1,8 @@
+// Modulo para escribir y leer archivos
 #include <stdio.h>
 #include <stdlib.h>
 #include <dirent.h>
 #include <string.h>
-
-
 
 
 void write_le_fichier(char *phrase, char *nom_fichier)
@@ -52,7 +51,7 @@ void introdiure_expression()
     char nom_fichier[100];
     printf("Ingrese la palabra o frase: ");
     // Funcion para obtener entrada 1
-    scanf("%s",phrase);
+    scanf("%s", phrase);
 
     printf("Introduce nombre del archivo: ");
     // Funcion para obtener entrada 2: conveniente para nombre de archivo
